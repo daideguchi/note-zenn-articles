@@ -8,7 +8,11 @@ note/
 ├── drafts/          # 下書き
 ├── published/       # 公開済み記事
 ├── images/          # 記事用画像
-└── templates/       # 記事テンプレート
+├── templates/       # 記事テンプレート
+└── scripts/         # 自動化スクリプト
+    ├── generate-images.py
+    ├── run-image-generation.sh
+    └── canva-mcp-config.json
 ```
 
 ## 📝 記事作成ルール
@@ -87,6 +91,34 @@ note/
 ![画像説明](https://ユーザー名.github.io/リポジトリ名/note/images/画像名.png)
 ```
 
+### 🎨 Canva MCP を使った画像自動生成
+
+#### セットアップ
+
+1. **Canva MCP サーバーをインストール**
+   ```bash
+   # Cursor で MCP サーバーをインストール済み
+   # @modelcontextprotocol/server-canva
+   ```
+
+2. **Canva アクセストークンを設定**
+   ```bash
+   # canva-mcp-config.json にトークンを設定
+   ```
+
+#### 画像自動生成
+
+```bash
+# 記事用画像を自動生成
+./scripts/run-image-generation.sh ai-think-tag-monitoring
+```
+
+#### 生成される画像
+
+- **メイン画像** (1200x630px): 記事サムネイル
+- **フローチャート** (800x600px): 欺瞞検出プロセス
+- **ダイアグラム** (800x600px): think タグ構造
+
 ### 画像管理ルール
 
 #### ディレクトリ構成
@@ -136,9 +168,8 @@ note/images/
 # 1. 下書き作成
 cp templates/article-template.md drafts/2024-01-15-記事タイトル.md
 
-# 2. 画像準備
-mkdir note/images/2024-01-15-記事タイトル
-# 画像ファイルを配置
+# 2. 画像準備（自動生成）
+./scripts/run-image-generation.sh 記事名
 
 # 3. 記事執筆
 # drafts/ 内で編集
@@ -215,6 +246,7 @@ find note/images -name "*.png" -exec convert {} -resize 1200x {} \;
 - [Zenn マークダウン記法](https://zenn.dev/zenn/articles/markdown-guide)
 - [GitHub Pages 設定](https://docs.github.com/ja/pages/getting-started-with-github-pages)
 - [GitHub Raw URL](https://docs.github.com/ja/repositories/working-with-files/using-files/viewing-a-file)
+- [Canva MCP サーバー](https://github.com/modelcontextprotocol/server-canva)
 
 ---
 

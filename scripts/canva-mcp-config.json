@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "canva": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-canva"],
+      "env": {
+        "CANVA_ACCESS_TOKEN": "your-canva-access-token-here"
+      }
+    }
+  }
+} 
