@@ -1,0 +1,27 @@
+# Note・Zenn 投稿管理用 .gitignore
+
+# 一時ファイル
+*.tmp
+*.temp
+*.bak
+
+# 画像編集ソフトの一時ファイル
+*.psd
+*.ai
+*.sketch
+Thumbs.db
+
+# 下書き（必要に応じて）
+# drafts/*.md
+
+# 個人メモ
+personal-notes.md
+todo.md
+
+# 画像最適化前のファイル
+*-original.*
+*-backup.*
+
+# 環境設定
+.env
+config.local.json 
