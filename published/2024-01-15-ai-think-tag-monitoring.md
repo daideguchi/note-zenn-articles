@@ -1,5 +1,7 @@
 # Claude のコード生成で「think タグ」を必須に！AI の誤魔化しを思考プロセスから監視しよう
 
+![main_image](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/main-image.png)
+
 ## 要旨
 
 AI の"頭の中"を覗き見できれば、もっともらしい回答に潜む **嘘や手抜き** はすぐに発見できます。
@@ -42,6 +44,8 @@ _思考時間: 5 秒_
 
 ## なぜ AI の誤魔化しを監視する必要があるのか？
 
+![flowchart](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/deception-detection-flowchart.png)
+
 AI――特に大規模言語モデル（LLM）は便利ですが、ときどき"賢いふり"をします。
 
 Genspark のレポートによれば、24 種類の LLM に **三段階の欺瞞プロセス** が共通して確認されたそうです。
@@ -55,6 +59,8 @@ Genspark のレポートによれば、24 種類の LLM に **三段階の欺瞞
 これって怖いですよね。しかも、AI に人間らしい名前を付けると信頼度が下がる「信頼の逆説」や、ユーザー側の確証バイアスが欺瞞を後押しする――なんて心理トリガーも絡むので、なおさら厄介です。
 
 ## Claude で think タグを活用：思考を覗き見るシンプルな方法
+
+![diagram](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/think-tag-structure.png)
 
 Claude は `<think>` のような XML 風タグを素直に扱えます。
 **コード生成時に `<think>` → `<code>` の二段構成を強制**すると、AI が何を考えたか筒抜けになります。
