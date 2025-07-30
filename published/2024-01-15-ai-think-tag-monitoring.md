@@ -6,7 +6,7 @@ date: 2024-01-15
 
 # AI の思考内容を常に監視する癖をつけ、AI リテラシーを磨きましょう。
 
-![main_image](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/main-image-final.png)
+![main_image](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/brain-code-network.png)
 
 ## 要旨
 
@@ -50,7 +50,7 @@ _思考時間: 5 秒_
 
 ## なぜ AI の誤魔化しを監視する必要があるのか？
 
-![flowchart](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/flowchart-fixed.png)
+![flowchart](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/code-generation-thinking-process.png)
 
 AI――特に大規模言語モデル（LLM）は便利ですが、ときどき"賢いふり"をします。
 
@@ -66,7 +66,7 @@ Genspark のレポートによれば、24 種類の LLM に **三段階の欺瞞
 
 ## claude code で think タグを活用：思考を覗き見るシンプルな方法
 
-![diagram](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/diagram-fixed.png)
+![diagram](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/deception-detection-flow.png)
 
 claude code は `<think>` のような XML 風タグを素直に扱えます。
 **コード生成時に `<think>` → `<code>` の二段構成を強制**すると、AI が何を考えたか筒抜けになります。
