@@ -4,7 +4,10 @@
       "command": "npx",
       "args": ["@modelcontextprotocol/server-canva"],
       "env": {
-        "CANVA_ACCESS_TOKEN": "your-canva-access-token-here"
+        "CANVA_CLIENT_ID": "your-canva-client-id",
+        "CANVA_CLIENT_SECRET": "your-canva-client-secret",
+        "CANVA_REDIRECT_URI": "http://localhost:3000/callback",
+        "CANVA_SCOPE": "user.profile:read user.media:write"
       }
     }
   }

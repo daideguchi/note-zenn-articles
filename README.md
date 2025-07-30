@@ -96,6 +96,7 @@ note/
 #### セットアップ
 
 1. **Canva MCP サーバーをインストール**
+
    ```bash
    # Cursor で MCP サーバーをインストール済み
    # @modelcontextprotocol/server-canva
