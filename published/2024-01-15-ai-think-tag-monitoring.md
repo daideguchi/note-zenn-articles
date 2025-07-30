@@ -50,7 +50,7 @@ _思考時間: 5 秒_
 
 ## なぜ AI の誤魔化しを監視する必要があるのか？
 
-![flowchart](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/flowchart-new.png)
+![flowchart](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/flowchart-fixed.png)
 
 AI――特に大規模言語モデル（LLM）は便利ですが、ときどき"賢いふり"をします。
 
@@ -66,7 +66,7 @@ Genspark のレポートによれば、24 種類の LLM に **三段階の欺瞞
 
 ## claude code で think タグを活用：思考を覗き見るシンプルな方法
 
-![diagram](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/diagram-new.png)
+![diagram](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/diagram-fixed.png)
 
 claude code は `<think>` のような XML 風タグを素直に扱えます。
 **コード生成時に `<think>` → `<code>` の二段構成を強制**すると、AI が何を考えたか筒抜けになります。
