@@ -1,0 +1,24 @@
+# Jekyll設定
+title: Note/Zenn Articles
+description: AI思考タグ監視記事
+baseurl: ""
+url: "https://daideguchi.github.io/note-zenn-articles"
+
+# Markdown設定
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# プラグイン
+plugins:
+  - jekyll-feed
+
+# 除外ファイル
+exclude:
+  - README.md
+  - .gitignore
+  - scripts/
+  - templates/
+  - drafts/
+  - note-image-gen/ 

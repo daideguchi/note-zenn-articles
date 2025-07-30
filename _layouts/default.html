@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .copy-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        .copy-button:hover {
+            background: #2980b9;
+        }
+        .success {
+            background: #27ae60 !important;
+        }
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <button class="copy-button" onclick="copyMarkdown()">📋 マークダウンをコピー</button>
+    <div class="container">
+        <div class="article-meta">
+            📅 {{ page.date | date: "%Y年%m月%d日" }}
+        </div>
+        {{ content }}
+    </div>
+    
+    <script>
+        function copyMarkdown() {
+            const button = document.querySelector('.copy-button');
+            const originalText = button.textContent;
+            
+            // ページのマークダウンコンテンツを取得
+            fetch(window.location.pathname.replace('.html', '.md'))
+                .then(response => response.text())
+                .then(markdownContent => {
+                    navigator.clipboard.writeText(markdownContent).then(function() {
+                        button.textContent = '✅ コピー完了！';
+                        button.classList.add('success');
+                        
+                        setTimeout(function() {
+                            button.textContent = originalText;
+                            button.classList.remove('success');
+                        }, 2000);
+                    });
+                })
+                .catch(error => {
+                    console.error('マークダウンファイルの取得に失敗しました:', error);
+                    button.textContent = '❌ エラー';
+                    setTimeout(function() {
+                        button.textContent = originalText;
+                    }, 2000);
+                });
+        }
+    </script>
+</body>
+</html> 

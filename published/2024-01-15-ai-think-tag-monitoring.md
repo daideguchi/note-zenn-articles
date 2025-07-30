@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Claude のコード生成で「think タグ」を必須に！AI の誤魔化しを思考プロセスから監視しよう"
+date: 2024-01-15
+---
+
 # Claude のコード生成で「think タグ」を必須に！AI の誤魔化しを思考プロセスから監視しよう
 
 ![main_image](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/main-image-new.png)
