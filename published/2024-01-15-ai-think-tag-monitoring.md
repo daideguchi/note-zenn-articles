@@ -6,7 +6,7 @@ date: 2024-01-15
 
 # AI の思考内容を常に監視する癖をつけ、AI リテラシーを磨きましょう。
 
-![main_image](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/main-image-new.png)
+![main_image](https://daideguchi.github.io/note-zenn-articles/images/2025-07-30-ai-think-tag-monitoring/main-image-final.png)
 
 ## 要旨
 
